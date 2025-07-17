@@ -2,13 +2,15 @@
     // verifica em qual pagina estamos
     $current_page = basename($_SERVER['PHP_SELF']);
 ?>
-<div class="navbar"> <ul>
+<div class="navbar">
+    <ul>
         <li><a class="<?php if($current_page == 'index.php') echo 'active' ?>" href="index.php">Home</a></li>
-        <li><a class="<?php if($current_page == 'add_product.php') echo 'active' ?>" href="add_product.php">Adicionar Produto</a></li>
+        <li><a class="<?php if($current_page == 'products.php') echo 'active' ?>" href="products.php">Produtos</a></li>
+        <li><a class="<?php if($current_page == 'admin_add_product.php') echo 'active' ?>" href="admin_add_product.php">Adicionar Produto</a></li>
         <li><a href="#">Carrinho</a></li>
         <li><a href="#">Checkout</a></li>
-        <li><a href="#">Cadastrar</a></li>
-    </ul>
+        <li><a class="<?php if($current_page == 'login.php') echo 'active' ?>" href="login.php">Login</a></li>
+        </ul>
 </div>
 
 <style>
@@ -46,4 +48,3 @@
         text-decoration: underline;
     }
 </style>
-
